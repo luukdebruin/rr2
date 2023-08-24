@@ -2,26 +2,26 @@
 /// <reference types="@remix-run/node" />
 
 declare global {
-	/**
-	 * A global `process` object is only available during build to access NODE_ENV.
-	 */
-	const process: {
-		env: { NODE_ENV: 'production' | 'development' }
-	}
+  /**
+   * A global `process` object is only available during build to access NODE_ENV.
+   */
+  const process: {
+    env: { NODE_ENV: "production" | "development" };
+  };
 
-	/**
-	 * Declare expected Env parameter in fetch handler.
-	 */
-	// interface Env {
-	// 	SESSION_SECRET: string
-	// 	PUBLIC_STOREFRONT_API_TOKEN: string
-	// 	PRIVATE_STOREFRONT_API_TOKEN: string
-	// 	PUBLIC_STOREFRONT_API_VERSION: string
-	// 	PUBLIC_STORE_DOMAIN: string
-	// 	PUBLIC_STOREFRONT_ID: string
-	// 	MTMO_PRIVATE_KEY_HMAC_256: string
-	// 	MAILCHIMP_U: string
-	// 	MAILCHIMP_ID: string
-	// 	MAILCHIMP_F_ID: string
-	// }
+  /**
+   * Declare expected Env parameter in fetch handler.
+   */
+  // interface Env {
+  // 	SESSION_SECRET: string
+  // 	PUBLIC_STOREFRONT_API_TOKEN: string
+  // 	PRIVATE_STOREFRONT_API_TOKEN: string
+  // 	PUBLIC_STOREFRONT_API_VERSION: string
+  // 	PUBLIC_STORE_DOMAIN: string
+  // 	PUBLIC_STOREFRONT_ID: string
+  // 	MTMO_PRIVATE_KEY_HMAC_256: string
+  // 	MAILCHIMP_U: string
+  // 	MAILCHIMP_ID: string
+  // 	MAILCHIMP_F_ID: string
+  // }
 }

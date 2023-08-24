@@ -1,7 +1,7 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
-  appDirectory: 'app',
-  watchPaths: ['./public'],
+  appDirectory: "app",
+  watchPaths: ["./public"],
   cacheDirectory: "./node_modules/.cache/remix",
   future: {
     v2_dev: true,
