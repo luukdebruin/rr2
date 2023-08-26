@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Calendas";
+    src: url("../../public/fonts/Calendas-Plus-Italic.otf");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "PP Neue Montreal Regular";
+    src: url("../../public/fonts/PPNeueMontreal-Regular.ttf");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "PP Neue Montreal Medium";
+    src: url("../../public/fonts/PPNeueMontreal-Medium.ttf");
+    font-display: swap
+}
