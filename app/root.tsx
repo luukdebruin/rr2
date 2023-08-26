@@ -13,7 +13,7 @@ export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet
 
 export const meta: MetaFunction = () => ({
 	charset: 'utf-8',
-	title: 'Raving Raccoons',
+	title: 'Raving Raccoons - Food Mood',
 	viewport: 'width=device-width,initial-scale=1',
 })
 
