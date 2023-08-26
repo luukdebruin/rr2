@@ -1,30 +1,25 @@
-import { Sun, Moon } from "lucide-react";
-import { Theme } from "~/utils/theme-provider";
+import React from 'react'
+import { Sun, Moon } from 'lucide-react'
+import { Theme } from '~/utils/theme-provider'
 
 const iconThemeMap = new Map([
-  [Theme.LIGHT, Sun],
-  [Theme.DARK, Moon],
-]);
+	[Theme.LIGHT, Sun],
+	[Theme.DARK, Moon],
+])
 
 export interface ThemeToggleIconProps {
-  theme: Theme;
-  checked: boolean;
+	theme: Theme
+	checked: boolean
 }
 
 export const ThemeToggleIcon = ({ theme, checked }: ThemeToggleIconProps) => {
-  const Component = iconThemeMap.get(theme);
+	const Component = iconThemeMap.get(theme)
 
-  if (Component) {
-    return (
-      <Component
-        key={theme}
-        width={23}
-        className={checked ? "fill-text-primary dark:fill-d-text-primary" : ""}
-      />
-    );
-  }
+	if (Component) {
+		return <Component key={theme} width={23} className={checked ? 'fill-text-primary dark:fill-d-text-primary' : ''} />
+	}
 
-  return <></>;
-};
+	return <></>
+}
 
-export default ThemeToggleIcon;
+export default ThemeToggleIcon
