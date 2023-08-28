@@ -927,6 +927,9 @@ video {
 .h-full {
   height: 100%;
 }
+.h-screen {
+  height: 100vh;
+}
 .w-\[30\%\] {
   width: 30%;
 }
@@ -997,6 +1000,9 @@ video {
 }
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.font-calendas {
+  font-family: Calendas, Helvetica, Arial, sans-serif;
 }
 .text-2xl {
   font-size: clamp(1.601806640625rem, calc(1.601806640625rem + (2.1599999999999997 - 1.601806640625) * ((100vw - 20rem) / (96 - 20))), 2.1599999999999997rem);
