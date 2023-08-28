@@ -13,7 +13,7 @@ import {
 } from '@remix-run/react'
 import clsx from 'clsx'
 
-import type { Theme } from '~/utils/theme-provider'
+import { Theme } from '~/utils/theme-provider'
 import { NonFlashOfWrongThemeEls, ThemeProvider, useTheme } from '~/utils/theme-provider'
 import { getThemeSession } from './utils/theme.server'
 
@@ -73,8 +73,7 @@ export default function AppWithProviders() {
 	)
 }
 
-export function ErrorBoundary() {
-	const data = useLoaderData<LoaderData>()
+export function Error() {
 	const [theme] = useTheme()
 	const error = useRouteError()
 	const isBot = useIsBot()
@@ -87,7 +86,7 @@ export function ErrorBoundary() {
 					<Meta />
 					<title>{isNotFound ? 'Not found' : 'Error'}</title>
 					<Links />
-					<NonFlashOfWrongThemeEls ssrTheme={Boolean(data.theme)} />
+					<NonFlashOfWrongThemeEls ssrTheme={Boolean(Theme.DARK)} />
 				</head>
 				<body className="font-montreal">
 					{isNotFound ? <NotFound /> : <GenericError error={{ message: `${error.status} ${error.data}` }} />}
@@ -111,5 +110,13 @@ export function ErrorBoundary() {
 				{isBot ? null : <Scripts />}
 			</body>
 		</html>
+	)
+}
+
+export function ErrorBoundary() {
+	return (
+		<ThemeProvider specifiedTheme={Theme.DARK}>
+			<Error />
+		</ThemeProvider>
 	)
 }

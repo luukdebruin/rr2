@@ -23,11 +23,17 @@ export default {
 				montrealBold: ['PP Neue Montreal Medium', 'Helvetica', 'Arial', 'sans-serif'],
 			},
 			colors: {
-				// white: {
-				// 	100: '#FFFFFF',
-				// 	200: '#D9D9D9',
-				// 	300: '#9E9E9E',
-				// },
+				white: {
+					100: '#FFFFFF',
+					200: '#D9D9D9',
+					300: '#9E9E9E',
+				},
+				black: {
+					100: '#000000',
+					200: '#1E1E1E',
+					300: '#383838',
+					400: '#4F4F4F',
+				},
 			},
 		},
 	},

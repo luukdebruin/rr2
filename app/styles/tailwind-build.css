@@ -874,6 +874,9 @@ video {
 .z-\[-1\] {
   z-index: -1;
 }
+.m-auto {
+  margin: auto;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -936,11 +939,18 @@ video {
 .w-full {
   width: 100%;
 }
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
 .w-screen {
   width: 100vw;
 }
 .min-w-\[100px\] {
   min-width: 100px;
+}
+.max-w-2xl {
+  max-width: 42rem;
 }
 .max-w-\[42em\] {
   max-width: 42em;
@@ -960,11 +970,55 @@ video {
 .justify-center {
   justify-content: center;
 }
+.gap-4 {
+  gap: 1rem;
+}
 .gap-\[0\.6em\] {
   gap: 0.6em;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
 .rounded-\[99em\] {
   border-radius: 99em;
+}
+.rounded-md {
+  border-radius: 0.375rem;
+}
+.bg-black-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-white-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-white-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(158 158 158 / var(--tw-bg-opacity));
+}
+.bg-none {
+  background-image: none;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .px-\[0\.67em\] {
   padding-left: 0.67em;
@@ -973,6 +1027,22 @@ video {
 .px-\[2em\] {
   padding-left: 2em;
   padding-right: 2em;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .py-48 {
   padding-top: 12rem;
@@ -995,23 +1065,44 @@ video {
 .text-center {
   text-align: center;
 }
+.font-calendas {
+  font-family: Calendas, Helvetica, Arial, sans-serif;
+}
 .font-montreal {
   font-family: PP Neue Montreal Regular, Helvetica, Arial, sans-serif;
+}
+.font-montrealBold {
+  font-family: PP Neue Montreal Medium, Helvetica, Arial, sans-serif;
 }
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.font-calendas {
-  font-family: Calendas, Helvetica, Arial, sans-serif;
-}
 .text-2xl {
   font-size: clamp(1.601806640625rem, calc(1.601806640625rem + (2.1599999999999997 - 1.601806640625) * ((100vw - 20rem) / (96 - 20))), 2.1599999999999997rem);
+}
+.text-3xl {
+  font-size: clamp(1.802032470703125rem, calc(1.802032470703125rem + (2.5919999999999996 - 1.802032470703125) * ((100vw - 20rem) / (96 - 20))), 2.5919999999999996rem);
 }
 .text-4xl {
   font-size: clamp(2.0272865295410156rem, calc(2.0272865295410156rem + (3.1103999999999994 - 2.0272865295410156) * ((100vw - 20rem) / (96 - 20))), 3.1103999999999994rem);
 }
+.text-5xl {
+  font-size: clamp(2.2806973457336426rem, calc(2.2806973457336426rem + (3.732479999999999 - 2.2806973457336426) * ((100vw - 20rem) / (96 - 20))), 3.732479999999999rem);
+}
+.text-base {
+  font-size: clamp(1.125rem, calc(1.125rem + (1.25 - 1.125) * ((100vw - 20rem) / (96 - 20))), 1.25rem);
+}
+.text-lg {
+  font-size: clamp(1.265625rem, calc(1.265625rem + (1.5 - 1.265625) * ((100vw - 20rem) / (96 - 20))), 1.5rem);
+}
+.text-sm {
+  font-size: clamp(1rem, calc(1rem + (1.0416666666666667 - 1) * ((100vw - 20rem) / (96 - 20))), 1.0416666666666667rem);
+}
 .text-xl {
   font-size: clamp(1.423828125rem, calc(1.423828125rem + (1.7999999999999998 - 1.423828125) * ((100vw - 20rem) / (96 - 20))), 1.7999999999999998rem);
+}
+.text-xs {
+  font-size: clamp(0.8888888888888888rem, calc(0.8888888888888888rem + (0.8680555555555557 - 0.8888888888888888) * ((100vw - 20rem) / (96 - 20))), 0.8680555555555557rem);
 }
 .font-bold {
   font-weight: 700;
@@ -1022,14 +1113,38 @@ video {
 .uppercase {
   text-transform: uppercase;
 }
+.\!leading-tight {
+  line-height: 1.25 !important;
+}
 .leading-\[1\.3\] {
   line-height: 1.3;
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+.text-black-100 {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-white-100 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .opacity-0 {
   opacity: 0;
 }
 .opacity-100 {
   opacity: 1;
+}
+.duration-200 {
+  transition-duration: 200ms;
+}
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @font-face {
@@ -1504,6 +1619,39 @@ video {
   .lg\:prose-xl :where(.lg\:prose-xl > :last-child):not(:where([class~="not-prose"] *)) {
     margin-bottom: 0;
   }
+}
+
+.hover\:bg-black-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 56 56 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-white-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
+}
+
+.disabled\:bg-black-100:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.disabled\:bg-white-100:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.disabled\:bg-white-300:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(158 158 158 / var(--tw-bg-opacity));
+}
+
+.disabled\:bg-opacity-100:disabled {
+  --tw-bg-opacity: 1;
+}
+
+.disabled\:opacity-20:disabled {
+  opacity: 0.2;
 }
 
 .prose-a\:no-underline :is(:where(a):not(:where([class~="not-prose"] *))) {

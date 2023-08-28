@@ -1,9 +1,10 @@
 import React from 'react'
+import { Paragraph } from './Type'
 
 export function GenericError({ error }: { error?: { message: string; stack?: string } }) {
 	return (
 		<div>
-			<p>Error message: {error?.message}</p>
+			<Paragraph>Error message: {error?.message}</Paragraph>
 		</div>
 	)
 }
