@@ -21,11 +21,16 @@ import stylesheet from '~/styles/tailwind-build.css'
 import { useIsBot } from './utils/bot-provider'
 import { NotFound } from './components/NotFound'
 import { GenericError } from './components/GenericError'
+import Layout from './components/Layout'
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }]
 
 export const meta: V2_MetaFunction = () => {
-	return [{ charset: 'utf-8' }, { title: 'Raving Raccoons' }, { viewport: 'width=device-width,initial-scale=1' }]
+	return [
+		{ charset: 'utf-8' },
+		{ title: 'Raving Raccoons' },
+		{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+	]
 }
 
 export type LoaderData = {
@@ -53,8 +58,10 @@ function App() {
 				<Links />
 				<NonFlashOfWrongThemeEls ssrTheme={Boolean(data.theme)} />
 			</head>
-			<body className="font-montreal">
-				<Outlet />
+			<body className="font-montreal bg-white-100 dark:bg-black-100">
+				<Layout>
+					<Outlet />
+				</Layout>
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />
@@ -88,8 +95,10 @@ export function Error() {
 					<Links />
 					<NonFlashOfWrongThemeEls ssrTheme={Boolean(Theme.DARK)} />
 				</head>
-				<body className="font-montreal">
-					{isNotFound ? <NotFound /> : <GenericError error={{ message: `${error.status} ${error.data}` }} />}
+				<body className="font-montreal bg-white-100 dark:bg-black-100">
+					<Layout>
+						{isNotFound ? <NotFound /> : <GenericError error={{ message: `${error.status} ${error.data}` }} />}
+					</Layout>
 					<ScrollRestoration />
 					{isBot ? null : <Scripts />}
 					<LiveReload />
@@ -106,7 +115,9 @@ export function Error() {
 				<Links />
 			</head>
 			<body>
-				<GenericError error={error as Error} />
+				<Layout>
+					<GenericError error={error as Error} />
+				</Layout>
 				{isBot ? null : <Scripts />}
 			</body>
 		</html>

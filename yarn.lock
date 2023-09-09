@@ -2595,6 +2595,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-responsive-masonry@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@types/react-responsive-masonry@npm:2.1.0"
+  dependencies:
+    "@types/react": "*"
+  checksum: 319aeecf3bc6d7a3e15ae2c9dc1a345d04e37dbbdf27f32c5e8fd985dbf5e045023a881367b336752b445abda9800a5f370fa6d7e7eabfc9ffda493bbdcd4e74
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*, @types/react@npm:>=16, @types/react@npm:^18.0.25":
   version: 18.2.21
   resolution: "@types/react@npm:18.2.21"
@@ -7699,15 +7708,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^0.123.0":
-  version: 0.123.0
-  resolution: "lucide-react@npm:0.123.0"
-  peerDependencies:
-    react: ^16.5.1 || ^17.0.0 || ^18.0.0
-  checksum: 6ec73073064edee9792b96e25ca2e9c1ead990f49c267d42ac45314791312dce38715e27ce320c09280eeac233f43ea5d1c0f74d0c11c18565e27af52eec9eb8
-  languageName: node
-  linkType: hard
-
 "lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
@@ -10130,6 +10130,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^4.10.1":
+  version: 4.10.1
+  resolution: "react-icons@npm:4.10.1"
+  peerDependencies:
+    react: "*"
+  checksum: b6c8d4fe482b112e1041515d93ef7670a0af128855c926052a076b64d0b991cdd4391394b26467100f8da3859db1ebd8f9c6b7614fa5969fde83de45c71031a3
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -10148,6 +10157,13 @@ __metadata:
   version: 0.14.0
   resolution: "react-refresh@npm:0.14.0"
   checksum: dc69fa8c993df512f42dd0f1b604978ae89bd747c0ed5ec595c0cc50d535fb2696619ccd98ae28775cc01d0a7c146a532f0f7fb81dc22e1977c242a4912312f4
+  languageName: node
+  linkType: hard
+
+"react-responsive-masonry@npm:^2.1.7":
+  version: 2.1.7
+  resolution: "react-responsive-masonry@npm:2.1.7"
+  checksum: d8fd1838f73554809ecf2fbb29605abdd40eecaeb09caf549ea674e7e319e02fa7ff7aae978914b16f3a5f802d03a16402765a093e0bbb1d782665fd41632d97
   languageName: node
   linkType: hard
 
@@ -10623,6 +10639,7 @@ __metadata:
     "@types/etag": ^1.8.1
     "@types/react": ^18.0.25
     "@types/react-dom": ^18.0.8
+    "@types/react-responsive-masonry": ^2.1.0
     "@typescript-eslint/eslint-plugin": ^6.4.1
     "@typescript-eslint/parser": ^6.4.1
     autoprefixer: ^10.4.13
@@ -10636,13 +10653,14 @@ __metadata:
     etag: ^1.8.1
     framer-motion: ^10.6.1
     isbot: ^3.6.5
-    lucide-react: ^0.123.0
     npm-run-all: ^4.1.5
     postcss: ^8.4.21
     postcss-cli: ^10.1.0
     prettier: ^2.8.0
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-icons: ^4.10.1
+    react-responsive-masonry: ^2.1.7
     rehype-highlight: ^6.0.0
     remix-utils: ^6.0.0
     tailwind-merge: ^1.14.0

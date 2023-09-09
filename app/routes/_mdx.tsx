@@ -3,15 +3,14 @@ import styles from 'highlight.js/styles/github-dark-dimmed.css'
 import type { LinksFunction, LoaderFunction } from '@remix-run/node'
 import { json } from '@remix-run/node'
 import { NavLink, Outlet, useLoaderData } from '@remix-run/react'
-import type { BlogList } from '~/data/blogList.server'
-import { blogList } from '~/data/blogList.server'
-import { ArrowLeft } from 'lucide-react'
+import { type Recipe, recipeList } from '~/data/recipeList.server'
+import { LiaArrowLeftSolid } from 'react-icons/lia'
 
 export const loader: LoaderFunction = async ({ request }) => {
 	const url = new URL(request.url)
 	const pathname = url.pathname
 
-	const currentPost = blogList.find(({ pathName }) => pathName === pathname)
+	const currentPost = recipeList.find(({ to }) => to === pathname)
 
 	return json(currentPost)
 }
@@ -21,12 +20,12 @@ export const links: LinksFunction = () => {
 }
 
 export default function BlogLayout() {
-	const currentPost = useLoaderData<BlogList>()
+	const currentPost = useLoaderData<Recipe>()
 
 	return (
 		<div>
 			<div className="mx-auto flex w-full max-w-[47rem]">
-				<ArrowLeft />{' '}
+				<LiaArrowLeftSolid />{' '}
 				<NavLink className="back-button ml-2 font-sans" to={'/blog'}>
 					Back
 				</NavLink>

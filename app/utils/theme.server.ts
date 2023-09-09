@@ -1,14 +1,13 @@
 import { createCookieSessionStorage } from '@remix-run/node'
-
-// import { getRequiredServerEnvVar } from './misc'
+import { getRequiredServerEnvVar } from './misc'
 import { Theme, isTheme } from './theme-provider'
 
 const themeStorage = createCookieSessionStorage({
 	cookie: {
-		name: 'theme',
+		name: 'my_remix_theme',
 		secure: true,
-		// secrets: [getRequiredServerEnvVar('SESSION_SECRET')],
-		sameSite: 'strict',
+		secrets: [getRequiredServerEnvVar('SESSION_SECRET')],
+		sameSite: 'lax',
 		path: '/',
 		maxAge: 31_536_000,
 		httpOnly: true,

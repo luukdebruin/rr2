@@ -4,21 +4,21 @@ import ThemeToggleIcon from './ThemeToggleIcon'
 
 const themes = [Theme.LIGHT, Theme.DARK]
 
-export const ThemeToggle = () => {
+const ThemeToggle = () => {
 	const [theme, setTheme] = useTheme()
 
 	function handleChange() {
 		setTheme((prevTheme) => (prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT))
 	}
 
-	const labelClass = 'relative flex cursor-pointer items-center justify-center'
-
 	return (
-		<div className="theme-toggle ml-2.5 inline-flex h-full items-center gap-[0.6em] rounded-[99em] px-[0.67em] py-[0.33em] pt-2">
+		<div className="inline-flex h-full items-center gap-2">
 			{themes.map((t) => (
 				<label
 					key={t}
-					className={theme === t ? `text-text-primary opacity-100 dark:text-d-text-primary ${labelClass}` : labelClass}
+					className={
+						'relative flex cursor-pointer items-center justify-center text-black-100 opacity-100 dark:text-white-100'
+					}
 				>
 					<ThemeToggleIcon theme={t} checked={theme === t} />
 					<input

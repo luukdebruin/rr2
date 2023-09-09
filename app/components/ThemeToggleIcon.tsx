@@ -1,10 +1,10 @@
 import React from 'react'
-import { Sun, Moon } from 'lucide-react'
+import { LiaSunSolid, LiaMoonSolid } from 'react-icons/lia'
 import { Theme } from '~/utils/theme-provider'
 
 const iconThemeMap = new Map([
-	[Theme.LIGHT, Sun],
-	[Theme.DARK, Moon],
+	[Theme.LIGHT, LiaSunSolid],
+	[Theme.DARK, LiaMoonSolid],
 ])
 
 export interface ThemeToggleIconProps {
@@ -12,11 +12,11 @@ export interface ThemeToggleIconProps {
 	checked: boolean
 }
 
-export const ThemeToggleIcon = ({ theme, checked }: ThemeToggleIconProps) => {
+const ThemeToggleIcon = ({ theme, checked }: ThemeToggleIconProps) => {
 	const Component = iconThemeMap.get(theme)
 
 	if (Component) {
-		return <Component key={theme} width={23} className={checked ? 'fill-text-primary dark:fill-d-text-primary' : ''} />
+		return <Component key={theme} size={32} className="text-black-100 dark:text-white-100" />
 	}
 
 	return <></>

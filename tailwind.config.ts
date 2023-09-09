@@ -3,6 +3,7 @@ const settingsScreens = require('./tailwind/settings.screens')
 const settingsFontSizes = require('./tailwind/settings.fontsizes')
 
 export default {
+	darkMode: 'class',
 	content: ['./app/**/*.{js,ts,jsx,tsx}'],
 	mode: 'jit',
 	theme: {
@@ -34,6 +35,7 @@ export default {
 					300: '#383838',
 					400: '#4F4F4F',
 				},
+				orange: '#F8333C',
 			},
 		},
 	},
