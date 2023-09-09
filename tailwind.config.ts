@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
-const settingsScreens = require('./tailwind/settings.screens')
-const settingsFontSizes = require('./tailwind/settings.fontsizes')
+import settingsScreens from './tailwind/settings.screens'
+import settingsFontSizes from './tailwind/settings.fontsizes'
 
 export default {
 	darkMode: 'class',

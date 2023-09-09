@@ -22,7 +22,7 @@ const clamp = (multiMin = 0, multiMax = null) => {
 	return `clamp(${_fsMin}rem, calc(${_fsMin}rem + (${_fsMax} - ${_fsMin}) * ((100vw - ${screenMin}rem) / (${screenMax} - ${screenMin}))), ${_fsMax}rem)`
 }
 
-module.exports = {
+const settingsFontSizes = {
 	xxs: clamp(-4),
 	xs: clamp(-2),
 	sm: clamp(-1),
@@ -38,3 +38,5 @@ module.exports = {
 	'8xl': clamp(9),
 	'9xl': clamp(10),
 }
+
+export default settingsFontSizes

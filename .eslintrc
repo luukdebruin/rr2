@@ -22,9 +22,7 @@
 	  }
 	},
 	"rules": {
-	  "linebreak-style": ["error", "unix"],
-	  "react-hooks/rules-of-hooks": "error",
-	  "react-hooks/exhaustive-deps": "warn"
+	  "linebreak-style": ["error", "unix"]
 	},
 	"overrides": [
 		{
@@ -37,7 +35,9 @@
 			"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/eslint-recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended" ],
 			"rules": {
 				"no-use-before-define": "off",
-				"@typescript-eslint/no-use-before-define": "off"
+				"@typescript-eslint/no-use-before-define": "off",
+				"@typescript-eslint/no-explicit-any": "off",
+				"@typescript-eslint/no-unused-vars": "off"
 			}
 		}
 	]

@@ -1,25 +1,25 @@
 {
-  "compilerOptions": {
-    "lib": ["esnext"],
-    "module": "esnext",
-    "target": "esnext",
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "strict": true,
-    "allowJs": true,
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./app/*"]
-    },
-    "types": ["bun-types"],
-  },
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", ".cache", "build", "public", ".vscode"]
+	"compilerOptions": {
+		"lib": ["esnext"],
+		"module": "esnext",
+		"target": "esnext",
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"jsx": "react-jsx",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"strict": true,
+		"allowJs": true,
+		"noEmit": true,
+		"allowImportingTsExtensions": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["./app/*"]
+		},
+		"types": ["bun-types"]
+	},
+	"include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+	"exclude": ["node_modules", ".cache", "build", "public", ".vscode"]
 }

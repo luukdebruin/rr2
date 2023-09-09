@@ -1,59 +1,60 @@
 {
-  "name": "ravingraccoons",
-  "description": "A food blog",
-  "private": true,
-  "scripts": {
-    "build": "bun remix build",
-    "dev": "bun remix dev",
-    "start": "remix-serve build",
-    "typecheck": "tsc",
-    "lint:eslint": "eslint .",
-    "lint:eslint:fix": "eslint . --fix",
-    "lint:prettier": "prettier --check \"./**/*.{ts,tsx,js,json,md}\"",
-    "lint:prettier:fix": "prettier --write \"./**/*.{ts,tsx,js,json,md}\"",
-    "lint": "bun lint:eslint && bun lint:prettier",
-    "lint:fix": "bun lint:eslint:fix && bun lint:prettier:fix"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,json,md}": [
-      "prettier --write"
-    ],
-    "*.{ts,tsx,js}": [
-      "eslint --fix"
-    ]
-  },
-  "dependencies": {
-    "@remix-run/node": "*",
-    "@remix-run/react": "*",
-    "@remix-run/serve": "*",
-    "etag": "^1.8.1",
-    "isbot": "^3.6.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rehype-highlight": "^6.0.0"
-  },
-  "devDependencies": {
-    "@remix-run/dev": "*",
-    "@remix-run/eslint-config": "*",
-    "@tailwindcss/typography": "^0.5.9",
-    "@types/etag": "^1.8.1",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
-    "@types/react-responsive-masonry": "^2.1.0",
-    "@typescript-eslint/eslint-plugin": "^6.6.0",
-    "@typescript-eslint/parser": "^6.6.0",
-    "bun-types": "^1.0.1",
-    "clsx": "^2.0.0",
-    "eslint": "^8.27.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "framer-motion": "^10.16.4",
-    "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
-    "prettier": "^2.8.0",
-    "react-icons": "^4.10.1",
-    "react-responsive-masonry": "^2.1.7",
-    "tailwindcss": "^3.2.7",
-    "typescript": "^5.2.2"
-  }
+	"name": "ravingraccoons",
+	"description": "A food blog",
+	"private": true,
+	"scripts": {
+		"build": "bun remix build",
+		"dev": "bun remix dev",
+		"start": "remix-serve build",
+		"typecheck": "tsc",
+		"lint:eslint": "eslint .",
+		"lint:eslint:fix": "eslint . --fix",
+		"lint:prettier": "prettier --check \"./**/*.{ts,tsx,js,json,md}\"",
+		"lint:prettier:fix": "prettier --write \"./**/*.{ts,tsx,js,json,md}\"",
+		"lint": "bun lint:eslint && bun lint:prettier",
+		"lint:fix": "bun lint:eslint:fix && bun lint:prettier:fix",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"*.{ts,tsx,js,json,md}": [
+			"prettier --write"
+		],
+		"*.{ts,tsx,js}": [
+			"eslint --fix"
+		]
+	},
+	"dependencies": {
+		"@remix-run/node": "*",
+		"@remix-run/react": "*",
+		"@remix-run/serve": "*",
+		"etag": "^1.8.1",
+		"isbot": "^3.6.5",
+		"prettier": "^3.0.3",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"rehype-highlight": "^6.0.0"
+	},
+	"devDependencies": {
+		"@remix-run/dev": "*",
+		"@remix-run/eslint-config": "*",
+		"@tailwindcss/typography": "^0.5.9",
+		"@types/etag": "^1.8.1",
+		"@types/react": "^18.0.25",
+		"@types/react-dom": "^18.0.8",
+		"@types/react-responsive-masonry": "^2.1.0",
+		"@typescript-eslint/eslint-plugin": "^6.6.0",
+		"@typescript-eslint/parser": "^6.6.0",
+		"bun-types": "^1.0.1",
+		"clsx": "^2.0.0",
+		"eslint": "^8.49.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"framer-motion": "^10.16.4",
+		"husky": "^8.0.3",
+		"lint-staged": "^14.0.1",
+		"react-icons": "^4.10.1",
+		"react-responsive-masonry": "^2.1.7",
+		"tailwindcss": "^3.2.7",
+		"typescript": "^5.2.2"
+	}
 }
