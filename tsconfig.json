@@ -20,6 +20,6 @@
 		},
 		"types": ["bun-types"]
 	},
-	"include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx", "remix.config.js"],
 	"exclude": ["node_modules", ".cache", "build", "public", ".vscode"]
 }
