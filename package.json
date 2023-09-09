@@ -1,22 +1,26 @@
 {
+  "name": "ravingraccoons",
+  "description": "A food blog",
   "private": true,
-  "sideEffects": false,
   "scripts": {
     "build": "bun remix build",
     "dev": "bun remix dev",
     "start": "remix-serve build",
     "typecheck": "tsc",
-    "lint": "eslint .",
-    "format": "prettier --write \"**/*.+(ts|tsx|json|yml|yaml|css|md|mdx)\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "bun run lint && bun run format"
-    }
+    "lint:eslint": "eslint .",
+    "lint:eslint:fix": "eslint . --fix",
+    "lint:prettier": "prettier --check \"./**/*.{ts,tsx,js,json,md}\"",
+    "lint:prettier:fix": "prettier --write \"./**/*.{ts,tsx,js,json,md}\"",
+    "lint": "bun lint:eslint && bun lint:prettier",
+    "lint:fix": "bun lint:eslint:fix && bun lint:prettier:fix"
   },
   "lint-staged": {
-    "*.+(ts|tsx)": "eslint --fix",
-    "*.+(json|css|mdx|md)": "prettier --write"
+    "*.{ts,tsx,js,json,md}": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx,js}": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "@remix-run/node": "*",
@@ -32,7 +36,6 @@
     "@remix-run/dev": "*",
     "@remix-run/eslint-config": "*",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/eslint": "^8.44.2",
     "@types/etag": "^1.8.1",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
@@ -43,7 +46,6 @@
     "clsx": "^2.0.0",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-mdx": "^2.0.5",
     "eslint-plugin-prettier": "^5.0.0",
     "framer-motion": "^10.16.4",
     "husky": "^8.0.3",
