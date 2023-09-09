@@ -1,7 +1,6 @@
 import React, { ButtonHTMLAttributes, ElementType, useCallback } from 'react'
 import { Link } from '@remix-run/react'
 import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
 
 export type ButtonColor = 'white' | 'none'
 export type ButtonSize = 'small' | 'medium' | 'large' | 'huge'
@@ -56,11 +55,7 @@ const Button = ({ as = 'button', onClick, preventDefault, className, color, size
 	)
 
 	return (
-		<Component
-			onClick={handleOnClick}
-			className={twMerge(defaultButtonStyles({ color, size }), className)}
-			{...props}
-		/>
+		<Component onClick={handleOnClick} className={clsx(defaultButtonStyles({ color, size }), className)} {...props} />
 	)
 }
 

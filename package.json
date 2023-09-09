@@ -2,26 +2,31 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "yarn run build:css && remix build",
-    "build:css": "postcss app/styles/tailwind.css -o app/styles/tailwind-build.css --env production",
-    "dev": "yarn run build:css && concurrently -g -r yarn:dev:css \"remix dev\"",
-    "dev:css": "postcss app/styles/tailwind.css -o app/styles/tailwind-build.css -w",
+    "build": "bun remix build",
+    "dev": "bun remix dev",
     "start": "remix-serve build",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.+(ts|tsx|json|yml|yaml|css|md|mdx)\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "bun run lint && bun run format"
+    }
+  },
+  "lint-staged": {
+    "*.+(ts|tsx)": "eslint --fix",
+    "*.+(json|css|mdx|md)": "prettier --write"
   },
   "dependencies": {
-    "@mdx-js/react": "^2.3.0",
     "@remix-run/node": "*",
     "@remix-run/react": "*",
     "@remix-run/serve": "*",
-    "clsx": "^1.2.1",
     "etag": "^1.8.1",
-    "framer-motion": "^10.6.1",
     "isbot": "^3.6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rehype-highlight": "^6.0.0",
-    "remix-utils": "^6.0.0"
+    "rehype-highlight": "^6.0.0"
   },
   "devDependencies": {
     "@remix-run/dev": "*",
@@ -32,27 +37,21 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "@types/react-responsive-masonry": "^2.1.0",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
-    "autoprefixer": "^10.4.13",
-    "concurrently": "^8.2.1",
-    "cssnano": "^6.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "bun-types": "^1.0.1",
+    "clsx": "^2.0.0",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-mdx": "^2.0.5",
-    "eslint-plugin-prettier": "^4.0.0",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.21",
-    "postcss-cli": "^10.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "framer-motion": "^10.16.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "^2.8.0",
     "react-icons": "^4.10.1",
     "react-responsive-masonry": "^2.1.7",
-    "tailwind-merge": "^1.14.0",
     "tailwindcss": "^3.2.7",
-    "typescript": "^4.8.4"
-  },
-  "engines": {
-    "node": ">=14"
-  },
-  "packageManager": "yarn@3.6.3"
+    "typescript": "^5.2.2"
+  }
 }

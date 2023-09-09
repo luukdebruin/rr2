@@ -95,11 +95,7 @@ const handleBrowserRequest = (
 		setTimeout(abort, ABORT_DELAY)
 	})
 
-export const handleDataRequest: HandleDataRequestFunction = async (
-	response,
-	// same args that get passed to the action or loader that was called
-	{ request },
-) => {
+export const handleDataRequest: HandleDataRequestFunction = async (response, { request }) => {
 	const clonedResponse = response.clone()
 	const body = await clonedResponse.text()
 

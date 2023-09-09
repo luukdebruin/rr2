@@ -17,7 +17,7 @@ import { Theme } from '~/utils/theme-provider'
 import { NonFlashOfWrongThemeEls, ThemeProvider, useTheme } from '~/utils/theme-provider'
 import { getThemeSession } from './utils/theme.server'
 
-import stylesheet from '~/styles/tailwind-build.css'
+import stylesheet from '~/styles/tailwind.css'
 import { useIsBot } from './utils/bot-provider'
 import { NotFound } from './components/NotFound'
 import { GenericError } from './components/GenericError'
