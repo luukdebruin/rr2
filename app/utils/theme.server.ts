@@ -6,7 +6,7 @@ const themeStorage = createCookieSessionStorage({
 	cookie: {
 		name: 'my_remix_theme',
 		secure: true,
-		secrets: [getRequiredServerEnvVar('SESSION_SECRET')],
+		// secrets: [getRequiredServerEnvVar('SESSION_SECRET')],
 		sameSite: 'lax',
 		path: '/',
 		maxAge: 31_536_000,
